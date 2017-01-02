@@ -1,0 +1,166 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">LIVEO</string>
+
+    <string name="titleTab1">Users</string>
+    <string name="titleTab2">Timeline</string>
+    <string name="titleTab3">Activity</string>
+    <string name="titleTab4">MyPage</string>
+
+    <string name="action_settings">Alert Settings</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_next">Done</string>
+    <string name="action_prev">Prev</string>
+    <string name="action_search">Search</string>
+
+    <string name="appVersion">201512311</string>
+    appVersion
+    <string name="action_alarm">Alarm Settings</string>
+    <string name="action_invite">Invite Friends</string>
+    <string name="action_qna">Q&amp;A</string>
+
+<!--    <string name="btn_send">Send</string> -->
+
+    <string name="res_audio">Play Audio from Resources</string>
+
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_broadcast">BroadcastActivity</string>
+    <string name="title_activity_timeline">MainActivity</string>
+
+    <string name="chat_server_url">http://1.234.83.232:3333/</string>
+    <string name="login_url">http://1.234.83.232:3333/login</string>
+    <string name="voice_upload_url">http://1.234.83.232:3333/upload</string>
+    <string name="image_upload_url">http://1.234.83.232:3333/upload-image</string>
+
+    <string name="wowza_server_record_url">52.53.214.41:8086/</string>
+    <string name="wowza_server_url">rtsp://52.53.214.41:1935/live/</string>
+    <string name="wowza_server_vod_url">rtsp://52.53.214.41:1935/vod/</string>`
+    <string name="wowza_server_vod_url_s3">https://s3-us-west-1.amazonaws.com/s3.liveo.me/wowza/</string>`
+
+    <string name="wowza_client_url">rtmp://52.53.214.41:1935/live/</string>
+    <string name="wowza_publisher_username">user</string>
+    <string name="wowza_publisher_password">1q2w3e4r</string>
+    <!--
+    <string name="wowza_server_record_url">1.234.83.232:8086/</string>
+    <string name="wowza_server_url">rtsp://1.234.83.232:1935/live/</string>
+    <string name="wowza_client_url">rtmp://1.234.83.232:1935/live/</string>
+    <string name="wowza_publisher_username">kidaehong</string>
+    <string name="wowza_publisher_password">realshare99</string>
+    -->
+    <string name="send">Send</string>
+    <string name="clear">Clear</string>
+
+    <string name="start">Start/Stop Streaming</string>
+    <string name="flash">Flash</string>
+    <string name="camera">Camera</string>
+
+    <string name="id">Id(email)</string>
+    <string name="pw">Pw</string>
+    <string name="signIn">Sign In</string>
+    <string name="join">New to Liveo? <font fgcolor="#ffff0000"><b>Sign Up</b></font></string>
+
+    <string name="signUp">Sign Up</string>
+    <string name="welcome">Using your real name makes it easier\n &#160; &#160; &#160;    for friends to recognize you.</string>
+
+    <string name="facebook_app_id">421134198080025</string>
+
+    <string name="statusFriendMsg1"> of your Facebook Friends</string>
+    <string name="statusFriendMsg2">are on LIVEO</string>
+
+    <string name="InviteFriendMsg1">Facebook Friends</string>
+    <string name="InviteFriendMsg2">Connected to Facebook and Find Your friends</string>
+
+    <string name="connectToFaceBook">Find Facebook Friends on LIVEO</string>
+    <string name="connectToFaceBook1">you can send a friend request or invitation</string>
+    <string name="connectToFaceBook2">to your Facebook friend and we will never post to </string>
+    <string name="connectToFaceBook3">Facebook without permission.</string>
+
+
+    <string name="notification_setting1">&#160; Dont like getting push notifications?\n&#160; Turn off push notifications as you like\n&#160; Dont worry, youll still see the information in your Notification tab</string>
+    <string name="notification_setting2">&#160; &#160;Receive push notifications when:</string>
+    <string name="notification_setting3">&#160; &#160;Friends status message changes</string>
+    <string name="notification_setting4">&#160; &#160;Enable this option to receive push notifications when your friends change their status messages</string>
+    <string name="notification_setting5">&#160; &#160;Comments on your status messages</string>
+    <string name="notification_setting6">&#160; &#160;Enable this option to receive push notifications when your friend write a comment on your status message</string>
+    <string name="notification_setting7">&#160; &#160;Comments on your post</string>
+    <string name="notification_setting8">&#160; &#160;Enable this option to receive push notifications when your friend write a comment on your post</string>
+
+
+    <string name="welcome_bottom">Already have an account?</string>
+    <string name="name">Name</string>
+
+    <string name="inviteEveryone">+Invite Everyone</string>
+    <string name="InviteFriendMsg">Liveo 에 있는 회원 </string>
+    <string name="inviteFriend">+Invite Friend</string>
+
+    <string name="pullEveryoneMessage">Pull your friends and see what they\'re up to!</string>
+    <string name="pullEveryone">Pull Everyone</string>
+    <string name="pub">Public</string>
+    <string name="pri">Private</string>
+    <string name="share">Share</string>
+    <string name="OK">OK</string>
+
+    <string name="pullOption">Pull Anonymously?</string>
+    <string name="YES">Yes</string>
+    <string name="EDIT">Edit</string>
+    <string name="REPLY">Reply</string>
+    <string name="NO">No</string>
+    <string name="PULL">Pull</string>
+
+    <string name="title_alarm">현재 알람 설정</string>
+    <string name="title_alarm_msg">시간 동안 알림 끄기</string>
+
+    <string name="exitTimeLine">Are you sure you want to remove this video from LIVEO?</string>
+    <string name="exitBroadcast">Exit Streaming?</string>
+    <string name="exitMain">Exit LIVEO?</string>
+    <string name="live">LIVE</string>
+    <string name="pull">PULL</string>
+
+    <string name="plzEnterId">Please enter ID</string>
+    <string name="plzEnterPass">Please enter password</string>
+
+    <string name="blocked_confirmation">App blocked</string>
+    <string name="pendingintent_cancel_exception">App has canceled action</string>
+    <string name="pendingintent_null_exception">App didn\'t define any action</string>
+
+    <string name="chatAccessFail">Chat server access failed</string>
+    <string name="askLeaveRoom">Are you sure you want to leave room?</string>
+    <string name="leaveRoom">Leaving room</string>
+    <string name="roomEnded">Streaming has ended</string>
+    <string name="firebaseUrl">https://liveo-27.firebaseio.com</string>
+
+    <string name="transfer">Transfer</string>
+
+    <string name="favorite_label">Favorite</string>
+    <string name="like_label">Like</string>
+    <string name="dislike_label">Dislike</string>
+    <string name="live_label">Live</string>
+    <string name="open_lv_sample">Open ListView sample</string>
+    <string name="open_rv_sample">Open RecyclerView sample</string>
+    <string name="device_admin_disable_warning">After disabling this service, some features in Heads-up might not work properly.</string>
+    <string name="reader_btn_dismiss">Dismiss</string>
+
+    <!-- parse.com keys-->
+    <string name="applicationid" >QO5qVfcHn4X7MaLJrNSzSJwgciMqe6Xk1Vi0ussL</string>
+    <string name="clientkey" >X08x4lE0iddrXbgaK0KYoptDLVaiekUlESWOjRxx</string>
+
+    <!-- GCM Sender ID -->
+    <string name="sender_id" >id:586276884901</string>
+
+        <string name="enable_background_audio">Play in background</string>
+        <string name="video">Video</string>
+        <string name="audio">Audio</string>
+        <string name="text">Text</string>
+        <string name="logging">Logging</string>
+        <string name="logging_normal">Normal</string>
+        <string name="logging_verbose">Verbose</string>
+        <string name="retry">Retry</string>
+        <string name="off">[off]</string>
+        <string name="error_drm_not_supported">Protected content not supported on API levels below 18</string>
+        <string name="error_drm_unsupported_scheme">This device does not support the required DRM scheme</string>
+        <string name="error_drm_unknown">An unknown DRM error occurred</string>
+        <string name="error_no_decoder">This device does not provide a decoder for <xliff:g id="mime_type">%1$s</xliff:g></string>
+        <string name="error_no_secure_decoder">This device does not provide a secure decoder for <xliff:g id="mime_type">%1$s</xliff:g></string>
+        <string name="error_querying_decoders">Unable to query device decoders</string>
+        <string name="error_instantiating_decoder">Unable to instantiate decoder <xliff:g id="decoder_name">%1$s</xliff:g></string>
+        <string name="storage_permission_denied">Permission to access storage was denied</string>
+</resources>

@@ -1,0 +1,163 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/profileGroup"
+        android:background="#f0f0f0"
+        android:gravity="center_vertical"
+        android:padding="5dp">
+
+        <kr.co.wegeneration.realshare.widget.CircularNetworkImageView
+            android:id="@+id/profileImage"
+            android:background="@drawable/default_profile_image"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="5dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="fitCenter"/>
+
+        <LinearLayout
+            android:layout_toLeftOf="@id/profileImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="20dp"
+            android:orientation="vertical"
+            android:id="@+id/profileHolder"
+            android:background="#f0f0f0"
+            android:gravity="right">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/nameTextView"
+                android:layout_alignParentRight="true"
+                android:singleLine="true"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:layout_alignParentRight="true">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/main_edit"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center_vertical|right"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/profileTextView"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_alignParentRight="true"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:background="#DADADA"
+        android:layout_width="fill_parent"
+        android:layout_above="@+id/tab_layout"
+        android:layout_height="2dp"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/switchHolder"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp"
+        android:gravity="center">
+
+         <!-- <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/pub"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"/>
+            -->
+
+<!--        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/swtShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            />-->
+        <Button
+            android:id="@+id/swtShare"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:background="@drawable/main_option_public"
+            android:checked="false"
+            />
+
+<!--        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/pri"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"/> -->
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_above="@id/switchHolder"
+        android:background="@drawable/main_button_share"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btnShare"
+        android:layout_marginBottom="10dp"/>
+
+
+    <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_above="@id/btnShare"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profileGroup">
+
+        <ListView
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/profileGroup"
+            android:layout_above="@id/btnShare"
+            android:layout_marginBottom="15dp"
+            android:id="@+id/lstFriend"/>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+</RelativeLayout>

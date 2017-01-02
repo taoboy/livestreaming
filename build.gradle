@@ -1,0 +1,103 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.1'
+    defaultConfig {
+        applicationId "kr.co.wegeneration.realshare"
+        minSdkVersion 18
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        //multiDexEnabled true
+    }
+    dexOptions {
+       // javaMaxHeapSize "4g"
+       // jumboMode = true
+    }
+
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+    }
+    packagingOptions{
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE-FIREBASE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+}
+dependencies {
+    //compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.android.support:design:23.0.1'
+    compile('com.google.android.gms:play-services-gcm:7.5.0')
+    compile 'com.loopj.android:android-async-http:1.4.9'
+    compile 'eu.the4thfloor.volley:com.android.volley:2015.05.28'
+    compile project(':libstreaming')
+    compile 'org.apache.directory.studio:org.apache.commons.io:2.4'
+    compile 'com.charonchui.vitamio:vitamio:4.2.2'
+    compile 'com.firebase:firebase-client-android:2.4.1'
+    //compile files('libs/parse-android-1.12.0.jar')
+    compile files('libs/Parse-1.9.4.jar')
+    //compile 'com.parse:parseui-login-android:0.0.1'
+    //compile 'com.parse:parse-android:1.11.0'
+    compile files('libs/android-viewbadger.jar')
+    //compile files('libs/universal-image-loader-1.9.2-SNAPSHOT-with-sources.jar')
+    //compile 'com.parse:parseui-login-android:0.0.1'
+    //compile('com.parse:parseui-widget-android:0.0.1')
+    compile 'com.parse.bolts:bolts-android:1.2.1'
+    //compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support:support-v4:23.0.1'
+    //compile 'com.melnykov:floatingactionbutton:1.3.0'
+    compile 'com.davemorrissey.labs:subsampling-scale-image-view:3.4.1'
+    compile ('com.facebook.android:facebook-android-sdk:4.7.0'){
+        exclude module: 'bolts-android'
+    }
+    //compile 'com.google.android.exoplayer:exoplayer:r1.5.3'
+    //compile 'com.amazonaws:aws-android-sdk-s3:2.+'
+    //compile 'org.apache.httpcomponents:httpmime:4.3.4'
+    //compile 'com.amazonaws.services.s3:1.6.1'
+    /*compile 'com.squareup.dagger:dagger:1.2.0'
+                                        compile 'com.github.pedrovgs:renderers:2.0.3'
+                                        compile 'javax.inject:javax.inject:1'
+                                        compile 'com.jakewharton:butterknife:7.0.1'
+                                        compile 'com.squareup.picasso:picasso:2.5.2'
+                                        compile 'com.jakewharton:butterknife-parent:7.0.1'*/
+    //compile 'com.parse:parsefacebookutils-v4-android:1.10.3@aar'
+    //compile 'com.amazonaws:aws-android-sdk-core:2.2.9'
+}
+/*allprojects  {
+    apply plugin: 'maven'
+
+    group = 'com.github.pedrovgs'
+    version = '2.0.4-SNAPSHOT'
+}
+
+subprojects {
+    apply plugin: 'java'
+    sourceCompatibility = 1.5
+    targetCompatibility = 1.5
+
+
+    repositories {
+        mavenLocal()
+
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+        maven { url "http://repo.maven.apache.org/maven2" }
+    }
+
+    configurations.all {
+    }
+
+
+}
+*/

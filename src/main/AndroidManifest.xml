@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="kr.co.wegeneration.realshare">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <!-- permission needed to check app state background / foreground -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!--
+      IMPORTANT: Change "info.androidhive.parsenotifications.permission.C2D_MESSAGE" in the lines below
+      to match your app's package name + ".permission.C2D_MESSAGE".
+    -->
+    <permission
+        android:name="kr.co.wegeneration.realshare.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="kr.co.wegeneration.realshare.permission.C2D_MESSAGE" />
+
+    <application
+        android:name=".app.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/liveo_logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".LoginActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" />
+
+
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:label="@string/app_name" />
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <activity android:name=".JoinActivity" />
+        <activity android:name=".NotificationSettingActivity" />
+        <activity android:name=".AddFriendWithFaceBookActivity" />
+        <activity android:name=".FindFriendWithFaceBookActivity" />
+
+        <activity android:name=".AddFriendActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="android.app.default_searchable"
+                android:value="*" />
+        </activity>
+        <meta-data android:name="android.app.default_searchable"
+            android:value=".SearchTest"/>
+        <activity android:name=".BroadcastActivity"
+            android:windowSoftInputMode="adjustNothing"
+            android:configChanges="orientation|keyboardHidden"
+            />
+
+        <activity android:name=".WatchActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustNothing"
+            />
+
+        <activity android:name=".ImageConfigureActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".util.ShowMsg"
+            android:theme="@style/Theme.AppCompat.Translucent"/>
+
+        <activity android:name=".util.ShowPopupDialog"/>
+        <activity android:name=".VideoViewDemo"/>
+        <!-- <activity android:name=".PlayerActivity"/>-->
+
+        <service
+            android:name=".gcm.OverlayServiceCommon"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+
+        <!-- Added for Parse push notifications -->
+
+        <service android:name="com.parse.PushService" />
+
+        <receiver
+            android:name=".gcm.GCMIntentService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <!-- IMPORTANT: Change "info.androidhive.parsenotifications" to match your app's package name. -->
+                <category android:name="kr.co.wegeneration.realshare" />
+            </intent-filter>
+        </receiver>
+
+
+        <meta-data
+            android:name="com.parse.push.notification_icon"
+            android:resource="@mipmap/liveo_logo_small" />
+        <!-- /Added for Parse push notifications -->
+    </application>
+
+</manifest>

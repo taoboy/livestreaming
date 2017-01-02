@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:fitsSystemWindows="true"
+    android:id="@+id/popup_root">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:clickable="true"
+    >
+
+    <LinearLayout
+        android:id="@+id/ownerProfileHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <!-- owner's profile holder-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ownerName"
+                android:text="tempName"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/btnClear"
+                android:layout_gravity="right"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/close_icon"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/horizontalLine"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/ownerProfileHolder"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#c8c8c8"/>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/pageButtonHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/replySendHolder"
+        android:layout_above="@id/pageButtonHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/comment"
+            android:padding="10dp"
+            android:hint="Write a comment"
+            android:layout_width="0dp"
+            android:layout_marginTop="5dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            />
+
+        <Button
+            android:id="@+id/statusReplyButton"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:background="@drawable/ic_action_chat_light"
+            />
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_above="@id/replySendHolder"
+        android:layout_below="@id/horizontalLine"
+        android:id="@+id/commentsListView"
+        android:divider="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"/>
+
+
+        <View
+            android:id="@+id/horizontalLineBelow"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/commentsListView"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#c8c8c8"/>
+        <!-- listview holding replies-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:padding="10dp">-->
+
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+            <!--android:id="@+id/nameTextView"-->
+            <!--android:layout_weight="1"-->
+            <!--android:singleLine="true"/>-->
+
+        <!--<Button-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/statusChangeButtonDialog"-->
+            <!--android:text="@string/EDIT"/>-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/icon_x"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:layout_marginRight="20dp"-->
+            <!--android:id="@+id/btnClear"/>-->
+
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:paddingTop="5dp"-->
+        <!--android:paddingBottom="5dp"-->
+        <!--android:paddingRight="20dp"-->
+        <!--android:paddingLeft="20dp"-->
+        <!--android:orientation="vertical"-->
+        <!--android:id="@+id/profileHolder"-->
+        <!--android:background="#f1f1f1"-->
+        <!--android:gravity="center_vertical">-->
+
+        <!--<EditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:inputType="text"-->
+            <!--android:id="@+id/profileTextViewStatus"/>-->
+
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textAppearance="?android:attr/textAppearanceSmall"-->
+            <!--android:id="@+id/timeTextView"-->
+            <!--android:layout_gravity="right"-->
+            <!--android:layout_weight="1"-->
+            <!--/>-->
+
+    <!--</LinearLayout>-->
+
+        <!--<ListView-->
+            <!--android:padding="15dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginBottom="5dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:transcriptMode="alwaysScroll"-->
+            <!--android:id="@+id/lstComment"/>-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:padding="10dp">-->
+            <!--<EditText-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/statusText"-->
+                <!--android:layout_weight="1" />-->
+            <!--<Button-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/statusReplyButton"-->
+                <!--android:text="@string/REPLY"/>-->
+    <!--</LinearLayout>-->
+
+    </RelativeLayout>
+</FrameLayout>

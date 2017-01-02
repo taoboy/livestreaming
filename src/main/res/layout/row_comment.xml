@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:gravity="center_vertical"
+    android:padding="10dp">
+
+    <kr.co.wegeneration.realshare.widget.CircularNetworkImageView
+        android:id="@+id/profileImage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/default_profile_image"/>
+
+    <TextView
+        android:id="@+id/username"
+        android:text="tempReply"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/comment"
+        android:text="tempReply"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="11dp"
+        android:layout_height="11dp"
+        android:background="@drawable/close_icon"
+        android:id="@+id/btnCommentDel"/>
+
+    <TextView
+        android:text="11/19 09:32"
+        android:id="@+id/timeOfComment"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+</LinearLayout>

@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:paddingLeft="@dimen/activity_horizontal_margin"
+	android:paddingRight="@dimen/activity_horizontal_margin"
+	android:paddingTop="@dimen/activity_vertical_margin"
+	android:paddingBottom="@dimen/activity_vertical_margin"
+	tools:context=".fragment.AccountFragment">
+
+	<LinearLayout
+		android:id="@+id/spinerlayout"
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<Spinner
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/spinPullMode" >
+		</Spinner>
+
+		<Button
+			android:id="@+id/btnPull"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:layout_centerHorizontal="true"
+			android:text="Pull Everyone" />
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/sharelayout"
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		>
+
+		<Switch
+			android:id="@+id/swtShare"
+			android:textOn="private"
+			android:textOff="public"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+
+		<Button
+			android:id="@+id/btnShare"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:layout_centerHorizontal="true"
+			android:text="Share" />
+
+		<Button
+			android:id="@+id/btnRefresh"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:layout_centerHorizontal="true"
+			android:text="Refresh" />
+
+	</LinearLayout>
+
+	<ListView
+		android:id="@+id/lstFriend"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@id/spinerlayout"
+		android:layout_above="@id/sharelayout"
+		>
+	</ListView>
+
+</RelativeLayout>

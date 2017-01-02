@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:focusable="false" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txtActivityName"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:paddingLeft="10dp"
+            android:gravity="left|center_vertical"
+            android:layout_alignParentLeft="true"
+            android:hint=""
+            android:singleLine="true"
+            android:textSize="16sp"
+            android:focusable="false" />
+
+        <TextView
+            android:id="@+id/txtActivityTime"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:paddingLeft="10dp"
+            android:gravity="right|center_vertical"
+            android:layout_alignParentRight="true"
+            android:hint=""
+            android:singleLine="true"
+            android:textSize="10sp"
+            android:focusable="false" />
+
+
+        <Button
+            android:id="@+id/btnRequestFriend"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:text="Request Sent"
+            android:layout_below="@+id/chkUser"
+            android:gravity="center"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

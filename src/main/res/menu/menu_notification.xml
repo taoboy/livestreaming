@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".AddFriendActivity">
+    <item android:id="@+id/action_done" android:title="@string/action_next"
+        android:orderInCategory="100" app:showAsAction="always"
+        android:actionViewClass="android.widget.SearchView"/>
+    <item android:id="@+id/action_version_noti" android:title="version"
+        android:orderInCategory="50" app:showAsAction="never"
+        />
+    <item android:id="@+id/action_logout_noti" android:title="@string/action_logout"
+        android:orderInCategory="100" app:showAsAction="never"
+        />
+</menu>
